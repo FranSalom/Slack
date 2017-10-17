@@ -20,4 +20,9 @@ class LoginVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func crearUsuarioBtn(_ sender: Any) {
+        performSegue(withIdentifier: CREATE_USER, sender: nil)
+    }
+    
+    
 }
