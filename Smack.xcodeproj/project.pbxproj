@@ -15,6 +15,7 @@
 		3E791E4E1F9487AD0075F6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E791E4D1F9487AD0075F6CD /* Assets.xcassets */; };
 		3E791E511F9487AD0075F6CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E791E4F1F9487AD0075F6CD /* LaunchScreen.storyboard */; };
 		3E8FD68F1F96EF0E00D4F3B0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FD68E1F96EF0E00D4F3B0 /* AuthService.swift */; };
+		3E8FD6911F97104800D4F3B0 /* ButtonsOfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FD6901F97104800D4F3B0 /* ButtonsOfUI.swift */; };
 		3EAFDF571F9490FA00A7BF25 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAFDF561F9490FA00A7BF25 /* ChatVC.swift */; };
 		3EAFDF591F94910900A7BF25 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAFDF581F94910900A7BF25 /* ChannelVC.swift */; };
 		3EAFDF5A1F94F60900A7BF25 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAFDF511F948B0B00A7BF25 /* SWRevealViewController.m */; };
@@ -32,6 +33,7 @@
 		3E791E501F9487AD0075F6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E791E521F9487AD0075F6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E8FD68E1F96EF0E00D4F3B0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3E8FD6901F97104800D4F3B0 /* ButtonsOfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsOfUI.swift; sourceTree = "<group>"; };
 		3EAFDF501F948B0B00A7BF25 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		3EAFDF511F948B0B00A7BF25 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3EAFDF521F948B0B00A7BF25 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				3EAFDF5B1F95041B00A7BF25 /* gradientView.swift */,
+				3E8FD6901F97104800D4F3B0 /* ButtonsOfUI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				3EAFDF571F9490FA00A7BF25 /* ChatVC.swift in Sources */,
 				3E00E0021F956A08005A5BAE /* CreateUserVC.swift in Sources */,
+				3E8FD6911F97104800D4F3B0 /* ButtonsOfUI.swift in Sources */,
 				3EAFDF591F94910900A7BF25 /* ChannelVC.swift in Sources */,
 				3E8FD68F1F96EF0E00D4F3B0 /* AuthService.swift in Sources */,
 				3EAFDF5E1F95246400A7BF25 /* LoginVC.swift in Sources */,
@@ -447,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5JCSTN7KA;
 				INFOPLIST_FILE = Smack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = franpple.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5JCSTN7KA;
 				INFOPLIST_FILE = Smack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = franpple.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";

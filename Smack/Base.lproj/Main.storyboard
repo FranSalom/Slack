@@ -400,6 +400,7 @@
                                 </state>
                                 <connections>
                                     <action selector="crearUsuarioBtn:" destination="sS6-cq-0t3" eventType="touchUpInside" id="Yr4-qr-0ct"/>
+                                    <action selector="elegirAvatar:" destination="fhl-ZF-2Mg" eventType="touchUpInside" id="HtV-tG-BoT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beD-Z8-svn">
@@ -413,6 +414,9 @@
                                 <state key="normal" title="Crear Usuario">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="crearUsuario:" destination="fhl-ZF-2Mg" eventType="touchUpInside" id="3UZ-CF-5OH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREA TU NUEVO USUARIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-lc-HP3">
                                 <rect key="frame" x="62.5" y="80" width="249.5" height="23"/>
@@ -435,6 +439,7 @@
                                 </state>
                                 <connections>
                                     <action selector="crearUsuarioBtn:" destination="sS6-cq-0t3" eventType="touchUpInside" id="ZrK-Zf-32C"/>
+                                    <action selector="elegirColorAvatar:" destination="fhl-ZF-2Mg" eventType="touchUpInside" id="XAh-da-gFL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -459,6 +464,10 @@
                         <viewLayoutGuide key="safeArea" id="7w5-1K-qxw"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="81i-lk-Dbx" id="icJ-9C-TDh"/>
+                        <outlet property="imgAvatar" destination="mLu-YF-ODm" id="oGE-RZ-lmL"/>
+                        <outlet property="passTxt" destination="sPD-AQ-4EZ" id="KAB-di-1zT"/>
+                        <outlet property="usernameTxt" destination="AQ9-xF-ucn" id="mxq-Vc-K8g"/>
                         <segue destination="8CZ-an-Hzz" kind="unwind" identifier="unwindSegue" unwindAction="prepareForUnwindWithSegue:" id="O8J-5R-Be7"/>
                     </connections>
                 </viewController>
