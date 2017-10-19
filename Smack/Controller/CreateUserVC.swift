@@ -16,6 +16,10 @@ class CreateUserVC: UIViewController {
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var imgAvatar: UIImageView!
     
+    //Variables
+    var avatarName = "profileDefault"
+    var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,20 +33,31 @@ class CreateUserVC: UIViewController {
     
     @IBAction func crearUsuario(_ sender: Any) {
         
+        guard let userName = usernameTxt.text, usernameTxt.text != "" else { return }
         guard let email = emailTxt.text, emailTxt.text != "" else { return }
         guard let pass = passTxt.text, passTxt.text != "" else { return }
+        
+        
+        
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
                 AuthService.instance.loginUser(email: email, password: pass, completition: { (success) in
                     if success {
-                        print("Usuario ha Ingresado!", AuthService.instance.authToken)
-                        self.performSegue(withIdentifier: UNWIND, sender: nil)
+                        AuthService.instance.addUser(name: userName, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                            if success {
+                                print(dataUserService.instance.name, dataUserService.instance.avatarName)
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
+                            }
+                        })
                     }
                 })
             }
         }
     }
+    
+    
+    
     
     @IBAction func elegirAvatar(_ sender: Any) {
     }
