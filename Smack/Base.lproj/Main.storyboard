@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -216,7 +217,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdM-Ze-c1t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdM-Ze-c1t" customClass="ButtonsOfUI" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="342" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35717463493347168" green="0.62476593255996704" blue="0.79555338621139526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -227,6 +228,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brd-1w-Ksf">
                                 <rect key="frame" x="62.5" y="392" width="250" height="50"/>
@@ -331,7 +337,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="R4X-WK-pSP">
-                                <rect key="frame" x="62.5" y="163" width="250" height="156"/>
+                                <rect key="frame" x="62.5" y="118" width="250" height="156"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQ9-xF-ucn">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
@@ -390,7 +396,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3G-XI-n0e">
-                                <rect key="frame" x="137" y="379" width="100" height="130"/>
+                                <rect key="frame" x="137" y="334" width="100" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="rei-03-nir"/>
                                 </constraints>
@@ -403,7 +409,7 @@
                                     <action selector="elegirAvatar:" destination="fhl-ZF-2Mg" eventType="touchUpInside" id="HtV-tG-BoT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beD-Z8-svn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beD-Z8-svn" customClass="ButtonsOfUI" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35717463490000001" green="0.62476593260000002" blue="0.79555338620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -414,25 +420,30 @@
                                 <state key="normal" title="Crear Usuario">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="crearUsuario:" destination="fhl-ZF-2Mg" eventType="touchUpInside" id="3UZ-CF-5OH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREA TU NUEVO USUARIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-lc-HP3">
-                                <rect key="frame" x="62.5" y="80" width="249.5" height="23"/>
+                                <rect key="frame" x="62.5" y="60" width="249.5" height="23"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="mLu-YF-ODm">
-                                <rect key="frame" x="137" y="379" width="100" height="100"/>
+                                <rect key="frame" x="137" y="334" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Ok0-ef-Xlg"/>
                                     <constraint firstAttribute="width" constant="100" id="qD6-5E-BEZ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYM-ee-7lD">
-                                <rect key="frame" x="113" y="513" width="148" height="26"/>
+                                <rect key="frame" x="113" y="468" width="148" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Cambia el color de tu Avatar">
                                     <color key="titleColor" red="0.35717463490000001" green="0.62476593260000002" blue="0.79555338620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -451,9 +462,9 @@
                             <constraint firstItem="RQ3-cK-mfM" firstAttribute="top" secondItem="7w5-1K-qxw" secondAttribute="top" id="BH3-UB-pGG"/>
                             <constraint firstItem="k3G-XI-n0e" firstAttribute="top" secondItem="mLu-YF-ODm" secondAttribute="top" id="MQv-by-9Tn"/>
                             <constraint firstItem="7w5-1K-qxw" firstAttribute="bottom" secondItem="beD-Z8-svn" secondAttribute="bottom" constant="20" id="WhO-dc-Nwf"/>
-                            <constraint firstItem="R4X-WK-pSP" firstAttribute="top" secondItem="h6i-lc-HP3" secondAttribute="bottom" constant="60" id="cs1-ON-8zd"/>
+                            <constraint firstItem="R4X-WK-pSP" firstAttribute="top" secondItem="h6i-lc-HP3" secondAttribute="bottom" constant="35" id="cs1-ON-8zd"/>
                             <constraint firstItem="gYM-ee-7lD" firstAttribute="centerX" secondItem="fpM-cz-qtN" secondAttribute="centerX" id="dsn-Mz-nUT"/>
-                            <constraint firstItem="h6i-lc-HP3" firstAttribute="top" secondItem="7w5-1K-qxw" secondAttribute="top" constant="60" id="eJ4-60-yOC"/>
+                            <constraint firstItem="h6i-lc-HP3" firstAttribute="top" secondItem="7w5-1K-qxw" secondAttribute="top" constant="40" id="eJ4-60-yOC"/>
                             <constraint firstItem="h6i-lc-HP3" firstAttribute="centerX" secondItem="fpM-cz-qtN" secondAttribute="centerX" id="goc-bM-OTA"/>
                             <constraint firstItem="k3G-XI-n0e" firstAttribute="width" secondItem="mLu-YF-ODm" secondAttribute="width" id="ofx-Ac-fSn"/>
                             <constraint firstItem="7w5-1K-qxw" firstAttribute="trailing" secondItem="RQ3-cK-mfM" secondAttribute="trailing" constant="16" id="qcN-qw-x02"/>

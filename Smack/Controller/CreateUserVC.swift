@@ -18,7 +18,9 @@ class CreateUserVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     @IBAction func closedBtn(_ sender: Any) {
@@ -32,7 +34,12 @@ class CreateUserVC: UIViewController {
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                print("Registro exitoso!")
+                AuthService.instance.loginUser(email: email, password: pass, completition: { (success) in
+                    if success {
+                        print("Usuario ha Ingresado!", AuthService.instance.authToken)
+                        self.performSegue(withIdentifier: UNWIND, sender: nil)
+                    }
+                })
             }
         }
     }
@@ -43,6 +50,9 @@ class CreateUserVC: UIViewController {
     @IBAction func elegirColorAvatar(_ sender: Any) {
     }
     
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
     
     
     
