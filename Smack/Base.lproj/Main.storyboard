@@ -180,13 +180,14 @@
                         <viewLayoutGuide key="safeArea" id="OK8-ox-zgR"/>
                     </view>
                     <connections>
+                        <outlet property="avatarImage" destination="HdV-RL-8TT" id="cGU-2R-5uw"/>
                         <outlet property="loginButton" destination="Fvq-mv-VSP" id="hGz-Bm-2n4"/>
                         <segue destination="sS6-cq-0t3" kind="show" identifier="loginVC" id="WNV-WF-bAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vuc-kZ-TUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-395"/>
+            <point key="canvasLocation" x="964" y="-395.35232383808096"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="a7e-Cg-6Hp">
@@ -233,6 +234,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LoginBtn:" destination="sS6-cq-0t3" eventType="touchUpInside" id="KJk-E9-DiB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brd-1w-Ksf">
                                 <rect key="frame" x="62.5" y="392" width="250" height="50"/>
@@ -292,6 +296,10 @@
                                     <constraint firstAttribute="width" constant="250" id="5J6-wy-SoA"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-5I-JYv">
+                                <rect key="frame" x="169" y="236" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -300,15 +308,20 @@
                             <constraint firstItem="Tcp-Oy-RwN" firstAttribute="centerX" secondItem="CHN-2b-m0e" secondAttribute="centerX" id="UPe-45-36z"/>
                             <constraint firstItem="vdM-Ze-c1t" firstAttribute="centerX" secondItem="CHN-2b-m0e" secondAttribute="centerX" id="VIu-Tz-0ZS"/>
                             <constraint firstItem="jSq-oJ-hi9" firstAttribute="trailing" secondItem="FBc-rJ-Qgf" secondAttribute="trailing" constant="16" id="Yzj-IF-GpT"/>
+                            <constraint firstItem="Gop-5I-JYv" firstAttribute="centerY" secondItem="CHN-2b-m0e" secondAttribute="centerY" constant="-79" id="eJb-lH-N3f"/>
                             <constraint firstItem="ZKK-YI-ZPo" firstAttribute="centerX" secondItem="CHN-2b-m0e" secondAttribute="centerX" id="eTZ-xA-hIg"/>
                             <constraint firstItem="brd-1w-Ksf" firstAttribute="centerX" secondItem="CHN-2b-m0e" secondAttribute="centerX" id="gPL-qR-6Gb"/>
                             <constraint firstItem="vdM-Ze-c1t" firstAttribute="top" secondItem="ZKK-YI-ZPo" secondAttribute="bottom" constant="60" id="mGp-oR-w9R"/>
+                            <constraint firstItem="Gop-5I-JYv" firstAttribute="centerX" secondItem="CHN-2b-m0e" secondAttribute="centerX" id="pet-Yy-ina"/>
                             <constraint firstItem="brd-1w-Ksf" firstAttribute="top" secondItem="vdM-Ze-c1t" secondAttribute="bottom" id="vpd-1E-VKl"/>
                             <constraint firstItem="ZKK-YI-ZPo" firstAttribute="top" secondItem="Tcp-Oy-RwN" secondAttribute="bottom" constant="60" id="zkL-j7-auM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jSq-oJ-hi9"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="lH5-Oe-A1P" id="weM-ky-Yi3"/>
+                        <outlet property="passTxt" destination="ovQ-wd-hTU" id="ObD-mb-d1n"/>
+                        <outlet property="spinner" destination="Gop-5I-JYv" id="Yqu-ua-HBn"/>
                         <segue destination="fhl-ZF-2Mg" kind="show" identifier="createUserVC" id="FWU-NX-6Bn"/>
                     </connections>
                 </viewController>

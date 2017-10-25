@@ -60,7 +60,9 @@ class CreateUserVC: UIViewController {
                             if success {
                                 self.spinnerActivity.isHidden = true
                                 self.spinnerActivity.stopAnimating()
+                                AuthService.instance.isLoggedIn = true
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                NotificationCenter.default.post(name: USER_DATA_DID_CHANGE, object: nil)
                             }
                         })
                     }
@@ -83,8 +85,9 @@ class CreateUserVC: UIViewController {
         
         UIView.animate(withDuration: 0.3){
             self.imgAvatar.backgroundColor = self.bgColor
-            self.avatarColor = sel
         }
+        
+        self.avatarColor = "[\(r), \(g), \(b), 1]"
     }
     
     @objc func dismissKeyboard(){
