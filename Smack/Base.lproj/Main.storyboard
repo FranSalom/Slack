@@ -84,6 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="qoH-RR-JOV"/>
                     </view>
                     <connections>
+                        <outlet property="channelTitle" destination="Ch7-2Y-4tq" id="Fij-EE-tVj"/>
                         <outlet property="menuBtn" destination="Pwa-vJ-A9l" id="3FB-1x-AXq"/>
                     </connections>
                 </viewController>
@@ -132,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="128" width="375" height="424"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H11-eN-3FR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="H11-eN-3FR" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H11-eN-3FR" id="TlJ-AP-zhd">
@@ -152,12 +153,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelTitle" destination="XPg-lh-Q7S" id="z1P-Zh-rjj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sar-nx-W24">
                                 <rect key="frame" x="265" y="87" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressedBtn:" destination="TN2-ih-4V2" eventType="touchUpInside" id="EGA-kd-faZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,6 +189,7 @@
                     <connections>
                         <outlet property="avatarImage" destination="HdV-RL-8TT" id="cGU-2R-5uw"/>
                         <outlet property="loginButton" destination="Fvq-mv-VSP" id="hGz-Bm-2n4"/>
+                        <outlet property="tableView" destination="HWv-Iq-rpw" id="HOs-NV-UKX"/>
                         <segue destination="sS6-cq-0t3" kind="show" identifier="loginVC" id="WNV-WF-bAv"/>
                     </connections>
                 </viewController>

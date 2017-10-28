@@ -134,6 +134,7 @@ class AuthService{
             completion(true)
         } else {
             completion(false)
+            debugPrint(response.result.error as Any)
         }
     }
 
