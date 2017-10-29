@@ -87,8 +87,17 @@ class ChatVC: UIViewController {
     
     @IBAction func sendMessageBtn(_ sender: Any) {
         
+        if AuthService.instance.isLoggedIn{
+        guard let channelId = messageService.instance.channelSelected?.id else { return }
+        guard let messageBody = messageTxtBox.text else { return }
         
-        
+            SocketService.instance.addMessage(messageBody: messageBody, userId: dataUserService.instance.id, channelId: channelId, completion: { (success) in
+                if success {
+                    self.messageTxtBox.text = ""
+                    self.messageTxtBox.resignFirstResponder()
+                }
+            })
+        }
     }
     
     
