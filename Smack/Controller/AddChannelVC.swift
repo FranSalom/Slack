@@ -34,8 +34,8 @@ class AddChannelVC: UIViewController {
         
         SocketService.instance.addChannels(channelName: channelName, channelDescription: channelDescription) { (success) in
             if success {
+                NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                 self.dismiss(animated: true, completion: nil)
-                
             }
         }
         

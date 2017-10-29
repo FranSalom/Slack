@@ -29,6 +29,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeUser(_:)), name: USER_DATA_DID_CHANGE, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNELS_LOADED, object: nil)
+        
+        SocketService.instance.getChannel { (success) in
+            if success{
+                self.tableView.reloadData()
+            }
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,6 +103,14 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } else {
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let channel = messageService.instance.channels[indexPath.row]
+        messageService.instance.channelSelected = channel
+        NotificationCenter.default.post(name: NOTIF_SELECTED_CHANNEL, object: nil)
+        
+        self.revealViewController().revealToggle(animated: true)
     }
     
     
