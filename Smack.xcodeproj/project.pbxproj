@@ -22,6 +22,7 @@
 		3E62BED51F9955F700BD86C8 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62BED41F9955F700BD86C8 /* AvatarPickerVC.swift */; };
 		3E62BED71F99562A00BD86C8 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62BED61F99562A00BD86C8 /* AvatarCell.swift */; };
 		3E644BB71FA51BE9001F363F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E644BB61FA51BE9001F363F /* Messages.swift */; };
+		3E644BB91FA64EB8001F363F /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E644BB81FA64EB8001F363F /* KeyboardBoundView.swift */; };
 		3E791E471F9487AD0075F6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E791E461F9487AD0075F6CD /* AppDelegate.swift */; };
 		3E791E4C1F9487AD0075F6CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E791E4A1F9487AD0075F6CD /* Main.storyboard */; };
 		3E791E4E1F9487AD0075F6CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E791E4D1F9487AD0075F6CD /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		3E62BED41F9955F700BD86C8 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		3E62BED61F99562A00BD86C8 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		3E644BB61FA51BE9001F363F /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		3E644BB81FA64EB8001F363F /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		3E791E431F9487AD0075F6CD /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E791E461F9487AD0075F6CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E791E4B1F9487AD0075F6CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				3E62BED61F99562A00BD86C8 /* AvatarCell.swift */,
 				3E1922661F9BA03000E04B8E /* CircleImg.swift */,
 				3E4A44381FA0FCCB00034389 /* ChannelCell.swift */,
+				3E644BB81FA64EB8001F363F /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E644BB91FA64EB8001F363F /* KeyboardBoundView.swift in Sources */,
 				3E949B281FA22F06004218EE /* SocketService.swift in Sources */,
 				3E288D141F9F9383009E30AC /* ProfileVC.swift in Sources */,
 				3E4A44391FA0FCCB00034389 /* ChannelCell.swift in Sources */,
