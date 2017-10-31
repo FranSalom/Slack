@@ -48,7 +48,5 @@ class ProfileVC: UIViewController {
    @objc func closeTap(){
         dismiss(animated: true, completion: nil)
     }
-    
-    
 
 }

@@ -82,19 +82,19 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messageBoxBtnAction:" destination="KTD-4l-tyE" eventType="editingChanged" id="QHh-Cu-VNZ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-mJ-pIe">
                                 <rect key="frame" x="329" y="632" width="30" height="30"/>
                                 <state key="normal" image="send"/>
-                                <connections>
-                                    <action selector="sendMessageBtn:" destination="KTD-4l-tyE" eventType="touchUpInside" id="PAR-au-yP1"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-d0-GDm">
                                 <rect key="frame" x="0.0" y="77" width="375" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" id="ar2-uW-OTK" customClass="MessageCell" customModule="Smack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="messageCell" id="ar2-uW-OTK" customClass="MessageCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ar2-uW-OTK" id="flI-rh-psx">
@@ -169,6 +169,7 @@
                         <outlet property="channelTitle" destination="Ch7-2Y-4tq" id="Fij-EE-tVj"/>
                         <outlet property="menuBtn" destination="Pwa-vJ-A9l" id="3FB-1x-AXq"/>
                         <outlet property="messageTxtBox" destination="0jf-zw-75u" id="NVi-qH-Tku"/>
+                        <outlet property="sendBtn" destination="aQd-mJ-pIe" id="BEN-QT-SBj"/>
                         <outlet property="tableView" destination="G3W-d0-GDm" id="PT8-Ww-cau"/>
                     </connections>
                 </viewController>

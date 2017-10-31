@@ -109,7 +109,6 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let channel = messageService.instance.channels[indexPath.row]
         messageService.instance.channelSelected = channel
         NotificationCenter.default.post(name: NOTIF_SELECTED_CHANNEL, object: nil)
-        
         self.revealViewController().revealToggle(animated: true)
     }
     
