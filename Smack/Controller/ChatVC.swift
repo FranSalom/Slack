@@ -15,13 +15,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var channelTitle: UILabel!
     @IBOutlet weak var messageTxtBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var typingUserLbl: UILabel!
     @IBOutlet weak var sendBtn: UIButton!
     
     
     //Variables
-    var userIsTyping: Bool = false
-    
-    
+    var isTyping = false
     
     
     override func viewDidLoad() {
@@ -30,11 +29,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        sendBtn.isHidden = true
+        
+        
         view.bindToKeyboard()
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.dissmiss))
         view.addGestureRecognizer(tap)
-        sendBtn.isEnabled = false
-        
         
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -47,7 +47,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if success {
                 self.tableView.reloadData()
                 let endIndex = IndexPath(row: messageService.instance.messages.count - 1, section: 0)
-                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
             }
         }
         
@@ -140,25 +140,22 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        } else {
         return UITableViewCell()
         }
-            
-            
         }
     
     
-    @IBAction func messageBoxBtnAction(_ sender: Any) {
-        
+    @IBAction func showBtn(_ sender: Any) {
         if messageTxtBox.text == "" {
-            userIsTyping = false
-            sendBtn.isEnabled = false
+            isTyping = false
+            sendBtn.isHidden = true
         } else {
-            if userIsTyping == false {
-                sendBtn.isEnabled = true
+            if isTyping == false {
+                sendBtn.isHidden = false
             }
-            userIsTyping = true
+            isTyping = true
         }
-        
-        
     }
+    
+    
     
     
     
