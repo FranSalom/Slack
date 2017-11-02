@@ -150,7 +150,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZt-nW-GyW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqP-f7-0C8">
                                 <rect key="frame" x="8" y="621" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,15 +159,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KqP-f7-0C8" firstAttribute="leading" secondItem="qoH-RR-JOV" secondAttribute="leading" constant="8" id="0df-T2-tvH"/>
                             <constraint firstItem="qoH-RR-JOV" firstAttribute="trailing" secondItem="0jf-zw-75u" secondAttribute="trailing" id="6ZO-ZD-mxj"/>
+                            <constraint firstItem="0jf-zw-75u" firstAttribute="top" secondItem="KqP-f7-0C8" secondAttribute="bottom" constant="6" id="8mJ-sg-iFK"/>
                             <constraint firstItem="0jf-zw-75u" firstAttribute="bottom" secondItem="qoH-RR-JOV" secondAttribute="bottom" id="9Q0-Bo-roP"/>
                             <constraint firstItem="qoH-RR-JOV" firstAttribute="trailing" secondItem="IBY-zA-MLg" secondAttribute="trailing" id="SE7-Ry-45w"/>
-                            <constraint firstItem="0jf-zw-75u" firstAttribute="top" secondItem="SZt-nW-GyW" secondAttribute="bottom" constant="6" id="T07-Lw-T17"/>
                             <constraint firstItem="IBY-zA-MLg" firstAttribute="leading" secondItem="qoH-RR-JOV" secondAttribute="leading" id="Vr6-bd-0y3"/>
                             <constraint firstItem="0jf-zw-75u" firstAttribute="leading" secondItem="qoH-RR-JOV" secondAttribute="leading" id="Xbq-Ui-O5c"/>
                             <constraint firstItem="G3W-d0-GDm" firstAttribute="trailing" secondItem="qoH-RR-JOV" secondAttribute="trailing" id="Zlo-gl-ElF"/>
                             <constraint firstItem="aQd-mJ-pIe" firstAttribute="centerY" secondItem="0jf-zw-75u" secondAttribute="centerY" id="f0T-rz-WC9"/>
-                            <constraint firstItem="SZt-nW-GyW" firstAttribute="leading" secondItem="qoH-RR-JOV" secondAttribute="leading" constant="8" id="fpA-mJ-QPb"/>
                             <constraint firstItem="G3W-d0-GDm" firstAttribute="top" secondItem="IBY-zA-MLg" secondAttribute="bottom" id="gPd-PN-ClF"/>
                             <constraint firstItem="qoH-RR-JOV" firstAttribute="trailing" secondItem="aQd-mJ-pIe" secondAttribute="trailing" constant="16" id="iVe-3R-syn"/>
                             <constraint firstItem="IBY-zA-MLg" firstAttribute="top" secondItem="sLT-aS-y0b" secondAttribute="top" id="pLy-Db-8GJ"/>
@@ -177,12 +177,12 @@
                         <viewLayoutGuide key="safeArea" id="qoH-RR-JOV"/>
                     </view>
                     <connections>
+                        <outlet property="TypingUsersLbl" destination="KqP-f7-0C8" id="2dW-bV-ejr"/>
                         <outlet property="channelTitle" destination="Ch7-2Y-4tq" id="Fij-EE-tVj"/>
                         <outlet property="menuBtn" destination="Pwa-vJ-A9l" id="3FB-1x-AXq"/>
                         <outlet property="messageTxtBox" destination="0jf-zw-75u" id="NVi-qH-Tku"/>
                         <outlet property="sendBtn" destination="aQd-mJ-pIe" id="hqr-WM-9d5"/>
                         <outlet property="tableView" destination="G3W-d0-GDm" id="PT8-Ww-cau"/>
-                        <outlet property="typingUserLbl" destination="SZt-nW-GyW" id="div-3z-I4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgG-4D-BIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
